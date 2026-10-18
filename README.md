@@ -1,15 +1,12 @@
 # listrr-dots
 
-Мои дотфайлы для **Hyprland** и **Waybar** на Void Linux.
-Стеклянный Waybar с белыми «пилюлями», серо-белая анимированная обводка окон, плавные анимации, размытие, блокировка через `hyprlock` и попиксельные хоткеи.
+жосткие дотсы для **Hyprland** и **Waybar** на Void Linux.
 
 ![preview](assets/preview.jpg)
 
-> Тема обоев и цветов — из [omarchy](https://github.com/basecamp/omarchy) (сейчас `tokyo-night`), иконки/курсор — Nerd Font `JetBrainsMono` + `MacTahoe-cursors`.
-
 ---
 
-## Что внутри
+## что внутри
 
 ```
 hypr/
@@ -37,7 +34,7 @@ waybar/
 
 ---
 
-## Установка
+## установка
 
 ```bash
 git clone https://github.com/listrrise/listrr-dots.git ~/listrr-dots
@@ -45,19 +42,19 @@ cd ~/listrr-dots
 ./install.sh
 ```
 
-Скрипт:
+скрипт:
 
 1. проверяет зависимости и говорит, чего не хватает;
 2. делает бэкап текущих `~/.config/hypr` и `~/.config/waybar`
    в `~/.config/dots-backup-<дата>-<время>/`;
 3. копирует конфиги в `~/.config/`;
-4. подставляет твой `$HOME` вместо `/home/listrise` в путях конфигов;
+4. подставляет твой `$HOME` вместо `/home/блаблабла` в путях конфигов;
 5. создаёт заглушку `~/.config/omarchy/current/theme/hyprland.conf`, если у тебя нет omarchy
    (иначе Hyprland будет ругаться на `source`).
 
-После установки перезапусти сессию Hyprland: `Super+Esc` → **Reload**, либо выйди и зайди снова.
+после установки перезапусти сессию Hyprland: `Super+Esc` → **Reload**, либо выйди и зайди снова.
 
-### Опции
+### опции
 
 ```bash
 ./install.sh --link        # не копировать, а сделать симлинки (удобно обновлять через git pull)
@@ -67,23 +64,20 @@ cd ~/listrr-dots
 ./install.sh --help
 ```
 
-> В режиме `--link` пути `/home/listrise` заменяются прямо в файлах репозитория,
-> так что `git status` покажет изменения. Это нормально.
-
 ---
 
-## Зависимости
+##зависимости
 
-**Обязательно:**
+**обязательно:**
 
-| Пакет | Зачем |
+| аакет | зачем |
 | --- | --- |
 | `hyprland` | сам композитор |
 | `waybar` | панель |
 
-**Нужны для того, что прописано в конфигах** (без них будут ошибки в логе и «пустые» места):
+**нужны для того, что прописано в конфигах** (без них будут ошибки в логе и «пустые» места):
 
-| Пакет | Зачем |
+| пакет | зачем |
 | --- | --- |
 | `kitty` | терминал (`Super+V`) |
 | `firefox` | браузер (`Super+B`) |
@@ -102,20 +96,14 @@ cd ~/listrr-dots
 | `JetBrainsMono Nerd Font` | шрифт иконок Waybar |
 | `MacTahoe-cursors` | курсор |
 
-Специфичное для моего сетапа:
-
-- `omarchy-theme-bg-next`, `void-screenshot`, `input-remapper-control`, `battery-notifier`
-  — это внешние скрипты/пакеты, у тебя их может не быть;
-- Waybar зовёт `~/.local/share/omarchy/bin/waybar-settings` (питоновская панель настроек из omarchy).
-
-Правь под себя в первую очередь `hypr/monitors.conf`, `hypr/bindings.conf`
+правь под себя в первую очередь `hypr/monitors.conf`, `hypr/bindings.conf`
 и пути к `waybar-settings` в `waybar/config.jsonc`.
 
 ---
 
-## Горячие клавиши
+## горячие клавиши
 
-| Хоткей | Действие |
+| хк | действие |
 | --- | --- |
 | `Super+V` / `Super+E` / `Super+B` | терминал / файлы / браузер |
 | `Super+N` / `Super+T` | nvim / btop |
@@ -143,10 +131,10 @@ cd ~/listrr-dots
 
 ---
 
-## Удаление
+## удаление
 
 ```bash
 ./install.sh --uninstall
 ```
 
-Конфиги будут убраны, а последний бэкап из `~/.config/dots-backup-*` вернётся на место.
+конфиги будут убраны, а последний бэкап из `~/.config/dots-backup-*` вернётся на место.
