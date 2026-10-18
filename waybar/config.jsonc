@@ -1,0 +1,98 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "margin-top": 4,
+    "margin-bottom": 0,
+    "margin-left": 6,
+    "margin-right": 6,
+    "spacing": 0,
+    "modules-left": [
+        "custom/settings",
+        "cpu",
+        "memory"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "hyprland/language",
+        "network",
+        "pulseaudio",
+        "clock",
+        "custom/lock"
+    ],
+    "custom/settings": {
+        "format": "󰒓",
+        "tooltip": true,
+        "tooltip-format": "ЛКМ: Центр управления системой\nПКМ: Перезагрузить панель",
+        "on-click": "hyprctl dispatch exec 'python3 /home/listrise/.local/share/omarchy/bin/waybar-settings'",
+        "on-click-right": "pkill -SIGUSR2 waybar"
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "󰻠 {usage}%",
+        "on-click": "alacritty --class FloatingTerm -e btop"
+    },
+    "memory": {
+        "interval": 3,
+        "format": "󰍛 {used:0.1f}G",
+        "on-click": "alacritty --class FloatingTerm -e btop"
+    },
+    "temperature": {
+        "interval": 4,
+        "critical-threshold": 80,
+        "format": "󰔏 {temperatureC}°C"
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "*": 8
+        }
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 35,
+        "rewrite": {
+            "": "Desktop"
+        }
+    },
+    "hyprland/language": {
+        "format": "󰌌 {}",
+        "format-en": "EN",
+        "format-ru": "RU"
+    },
+    "bluetooth": {
+        "format": "󰂯",
+        "on-click": "hyprctl dispatch exec 'python3 /home/listrise/.local/share/omarchy/bin/waybar-settings'"
+    },
+    "network": {
+        "format": "󰤨 {essid}",
+        "on-click": "hyprctl dispatch exec 'python3 /home/listrise/.local/share/omarchy/bin/waybar-settings'"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 0%",
+        "format-icons": {
+            "headphone": "󰋋",
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle || pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+ || true",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- || true"
+    },
+    "clock": {
+        "format": "󰥔 {:%H:%M}",
+        "format-alt": "󰃭 {:%d.%m.%Y}"
+    },
+    "custom/lock": {
+        "format": "󰌾",
+        "on-click": "pidof hyprlock || hyprlock -c ~/.config/hypr/hyprlock.conf"
+    }
+}

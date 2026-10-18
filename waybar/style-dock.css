@@ -1,0 +1,9 @@
+* { border: none; box-shadow: none; font-family: "JetBrainsMono Nerd Font", monospace; }
+window#waybar, window#waybar > box { background: transparent; }
+.modules-center { background: linear-gradient(135deg, rgba(255, 255, 255, 0.34), rgba(190, 210, 235, 0.16)); border: 1.5px solid rgba(255, 255, 255, 0.80); border-radius: 20px; padding: 6px 14px; margin: 2px; transition: all 0.32s ease; }
+
+#custom-d_term, #custom-d_files, #custom-d_browser, #custom-d_btop, #custom-d_settings { font-size: 22px; color: #ffffff; padding: 4px 10px; margin: 4px 3px; border-radius: 14px; background: rgba(255, 255, 255, 0.1); transition: all 0.28s ease; }
+#custom-d_term:hover, #custom-d_files:hover, #custom-d_browser:hover, #custom-d_btop:hover, #custom-d_settings:hover { font-size: 30px; background: rgba(255, 255, 255, 0.94); color: #121212; }
+#taskbar button { padding: 4px 8px; margin: 4px 3px; border-radius: 14px; background: transparent; transition: all 0.28s ease; }
+#taskbar button:hover { background: rgba(255, 255, 255, 0.88); }
+#taskbar button.active { background: rgba(255, 255, 255, 0.28); border-bottom: 2px solid #ffffff; }

@@ -1,0 +1,10 @@
+* { border: none; border-radius: 0; box-shadow: none; text-shadow: none; font-family: "JetBrainsMono Nerd Font", monospace; font-weight: bold; font-size: 12.5px; min-height: 0; }
+window#waybar, window#waybar > box, .modules-left, .modules-center, .modules-right { background: transparent; border: none; box-shadow: none; }
+window#waybar { background: transparent; color: #e6e6e6; }
+tooltip { background-color: rgba(20, 22, 28, 0.92); border: 1.5px solid #c0bfbc; border-radius: 8px; color: #ffffff; }
+#custom-settings, #cpu, #memory, #temperature, #workspaces, #window, #language, #bluetooth, #network, #pulseaudio, #clock, #battery, #tray, #custom-lock { background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(210, 220, 235, 0.22) 50%, rgba(255, 255, 255, 0.3) 100%); color: #ffffff; border: 1.5px solid rgba(255, 255, 255, 0.6); border-radius: 8px; padding: 2px 8px; margin: 1px 1px; transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1); }
+#custom-settings { background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(230, 235, 245, 0.32)); color: #121212; border: 1.5px solid #ffffff; padding: 2px 10px; }
+#workspaces { padding: 2px 5px; }
+#workspaces button { padding: 1px 7px; margin: 1px 2px; min-width: 18px; border-radius: 5px; color: rgba(235, 235, 235, 0.78); background: transparent; transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+#workspaces button.active { background: rgba(255, 255, 255, 0.94); color: #101010; border-radius: 5px; min-width: 45px; padding: 1px 14px; }
+#workspaces button:hover { background: rgba(255, 255, 255, 0.28); color: #ffffff; }

@@ -1,0 +1,40 @@
+{
+    "name": "dock",
+    "layer": "top",
+    "position": "bottom",
+    "exclusive": true,
+    "margin-bottom": 2,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 4,
+    "modules-center": [
+        "wlr/taskbar",
+        "custom/d_settings"
+    ],
+    "custom/d_term": {
+        "format": "󰆍",
+        "on-click": "hyprctl dispatch exec alacritty"
+    },
+    "custom/d_files": {
+        "format": "󰉋",
+        "on-click": "hyprctl dispatch exec 'alacritty --class FloatingTerm -e yazi'"
+    },
+    "custom/d_browser": {
+        "format": "󰈹",
+        "on-click": "hyprctl dispatch exec 'firefox || chromium'"
+    },
+    "custom/d_btop": {
+        "format": "󰻠",
+        "on-click": "hyprctl dispatch exec 'alacritty --class FloatingTerm -e btop'"
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 24,
+        "on-click": "activate",
+        "on-click-middle": "close"
+    },
+    "custom/d_settings": {
+        "format": "󰒓",
+        "on-click": "hyprctl dispatch exec 'python3 /home/listrise/.local/share/omarchy/bin/waybar-settings'"
+    }
+}
